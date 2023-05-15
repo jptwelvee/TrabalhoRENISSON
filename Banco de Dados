@@ -1,0 +1,35 @@
+create database matheus;
+use matheus;
+
+
+create table tb_cadastro(
+id_produto int primary key auto_increment,
+nome_produto varchar(255),
+quantidade_produto varchar(255),
+tempo_produto varchar(255)
+);
+
+create table tb_cadUsuario(
+id_Usuario int primary key auto_increment,
+nome_Usuario varchar(255),
+dtNasc_Usuario varchar(15),
+email_Usuario varchar(255),
+senha_Usuario varchar(80),
+dataCad_Usuario TIMESTAMP DEFAULT(CURRENT_TIMESTAMP())
+);
+
+create table tb_produtos(
+id_produto int primary key auto_increment,
+nome_produto varchar(40),
+desc_produto varchar(255),
+cod_produto varchar(30) unique,
+quant_produto varchar(10),
+fileira_produto varchar(70),
+setor_produto varchar(70),
+uso_produto varchar(5),
+unidade_produto varchar(20),
+anotacao_produto varchar(255)
+);
+
+
+drop table tb_reclamacao;
