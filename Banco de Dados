@@ -2,24 +2,18 @@ create database matheus;
 use matheus;
 
 
-create table tb_cadastro(
-id_produto int primary key auto_increment,
-nome_produto varchar(255),
-quantidade_produto varchar(255),
-tempo_produto varchar(255)
-);
 
 create table tb_cadUsuario(
-id_Usuario int primary key auto_increment,
+id_Usuario int unsigned not null primary key auto_increment,
 nome_Usuario varchar(255),
 dtNasc_Usuario varchar(15),
-email_Usuario varchar(255),
+email_Usuario varchar(255)unique,
 senha_Usuario varchar(80),
 dataCad_Usuario TIMESTAMP DEFAULT(CURRENT_TIMESTAMP())
 );
 
 create table tb_produtos(
-id_produto int primary key auto_increment,
+id_produto int unsigned not null primary key auto_increment,
 nome_produto varchar(40),
 desc_produto varchar(255),
 cod_produto varchar(30) unique,
@@ -32,4 +26,18 @@ anotacao_produto varchar(255)
 );
 
 
-drop table tb_reclamacao;
+create table tb_chaves(
+id_chave int unsigned not null auto_increment primary key,
+sala_chave varchar(80),
+solicitante_chave varchar(80),
+emailSolicitante_chave varchar(155),
+telefoneSolicitante_chave varchar(20),
+dataEHoraRetirada_chave  varchar(80),
+dataEHoraDevolucao_chave varchar(80)
+);
+
+insert into tb_chaves(sala_chave,solicitante_chave,emailSolicitante_chave,telefoneSolicitante_chave,dataEHoraRetirada_chave,dataEHoraDevolucao_chave)
+ values('Info lab 2','Ramom','ramomsenai@senai.com','27 995999-9999','dia 25/03/2005 as 8:40','dia 25/03/2005 as 17:40');
+ 
+ select*from tb_chaves;
+drop table tb_chaves;
