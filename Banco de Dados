@@ -36,8 +36,9 @@ dataEHoraRetirada_chave  varchar(80),
 dataEHoraDevolucao_chave varchar(80)
 );
 
-insert into tb_chaves(sala_chave,solicitante_chave,emailSolicitante_chave,telefoneSolicitante_chave,dataEHoraRetirada_chave,dataEHoraDevolucao_chave)
- values('Info lab 2','Ramom','ramomsenai@senai.com','27 995999-9999','dia 25/03/2005 as 8:40','dia 25/03/2005 as 17:40');
+insert into tb_chaves(sala_chave)
+ values('Sala 1');
+
  
  select*from tb_chaves;
-drop table tb_chaves;
+drop table tb_cadUsuario;
