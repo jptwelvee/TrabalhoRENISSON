@@ -36,9 +36,26 @@ dataEHoraRetirada_chave  varchar(80),
 dataEHoraDevolucao_chave varchar(80)
 );
 
-insert into tb_chaves(sala_chave)
- values('Sala 1');
+create table tb_emprestimos(
+id_emprestimo int unsigned not null auto_increment primary key,
+nome_emprestimo varchar(80),
+solicitante_emprestimo varchar(80),
+emailSolicitante_emprestimo varchar(155),
+telefoneSolicitante_emprestimo varchar(20),
+dataEHoraRetirada_emprestimo  varchar(80),
+dataEHoraDevolucao_emprestimo varchar(80)
+);
+
+CREATE TABLE tb_emprestimo (
+  id_emp int primary key auto_increment,
+  nome_emp VARCHAR(80) NOT NULL unique,
+  produto_emp VARCHAR(20) NOT NULL,
+  qtd_emp VARCHAR(20) NOT NULL,
+  contato_emp VARCHAR(30) not null,
+  data_emp TIMESTAMP DEFAULT CURRENT_TIMESTAMP()
+);
+
 
  
- select*from tb_chaves;
-drop table tb_cadUsuario;
+ select*from tb_emprestimos;
+drop table tb_emprestimos;
