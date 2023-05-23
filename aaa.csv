@@ -1,0 +1,9 @@
+id_chave,sala_chave,solicitante_chave,emailSolicitante_chave,telefoneSolicitante_chave,dataEHoraRetirada_chave,dataEHoraDevolucao_chave
+1,"Sala 1",NULL,NULL,NULL,NULL,NULL
+2,"Sala 2",NULL,NULL,NULL,NULL,NULL
+3,"Sala 3",NULL,NULL,NULL,NULL,NULL
+4,"Sala 4",NULL,NULL,NULL,NULL,NULL
+5,"Sala 5",NULL,NULL,NULL,NULL,NULL
+6,"Sala 6",NULL,NULL,NULL,NULL,NULL
+7,"Sala 7",NULL,NULL,NULL,NULL,NULL
+8,"Sala 8",NULL,NULL,NULL,NULL,NULL
