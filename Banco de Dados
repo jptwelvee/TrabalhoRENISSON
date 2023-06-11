@@ -47,6 +47,16 @@ dataEHoraRetirada_emprestimo  varchar(80),
 dataEHoraDevolucao_emprestimo varchar(80)
 );
 
+create table tb_relatorioProduto(
+id_relatorioprod int unsigned not null primary key auto_increment,
+nome_relatorioprod varchar(40),
+cadastrante_relatorioprod varchar (40),
+cod_relatorioprod varchar(30),
+quant_relatorioprod int
+);
+select * from tb_relatorioProduto;
+
+drop table tb_relatorioProduto;
 
 
  
